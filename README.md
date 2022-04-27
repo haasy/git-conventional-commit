@@ -1,4 +1,4 @@
-#Git with Conventional Commits
+# Git with Conventional Commits
 
 The `.gitmessage` template can be used as a commit template for a repository by running
 ```bash
