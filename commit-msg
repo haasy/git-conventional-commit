@@ -1,0 +1,13 @@
+#!/bin/bash
+regex="^build|chore|ci|docs|feat|fix|perf|refactor|style|test(\([a-zA-Z0-9]+\))?\!?:[[:space:]].+$"
+msg="$(cat ${1} | sed -re "/^#.*$/d" | head -1)"
+if [[ ! "${msg}" =~ $regex ]]; then
+	echo -e "\e[31mINVALID COMMIT MESSAGE\e[0m: ${msg}"
+	echo -e "--------------------------------------------------------"
+	echo -e "\e[32mMessage Format:\t\e[0m <type>[(optional scope)]: <description>"
+	echo -e "\e[32mAllowed Types:\t\e[0m build, chore, ci, docs, feat, fix, perf, refactor, style, test"
+	echo -e "\e[32mScope:\t\t\e[0m can only contain a-z, A-Z and 0-9"
+	echo -e "\e[32mDescription:\t\e[0m can only contain non special characters"
+	exit 1
+fi
+exit 0

@@ -1,0 +1,30 @@
+# Types:
+#	- build: 	effects build system or external deps.
+#	- chore: 	if no other type is applicable
+#	- ci:		changes to the ci config or scripts
+#	- docs:		changes only to the documentation
+#	- feat:		new feature
+#	- fix:		bug fix
+#	- perf:		code change that improves performance
+#	- refactor:	code change that neither fixes bugs nor adds a feature
+#	- sytle:	code change that does not affect the semantics of the code
+#				(e.g. formatting, white-space, typos, ...)
+#	- test:		addition of missing tests or correction of existing tests
+#
+# Scope: Defines the context of a change. Often a module name is used as scope.
+#
+# Description, Body & footer: 	Describes the changes in using the imperative
+#								form in the present tense. The first letter is								
+#								not capitalized and no dot is added at the end.
+#								It also must not contain special characters.
+#
+# Breaking Changes:	If the commit contains breaking changes either a '!' is
+#					added before the ':' (feat!: this is a breaking change) or
+#					a footer with the prefix 'BREAKING CHANGE:' must be
+#					included.
+#
+<type>[(optional scope)]: <description>
+
+[optional body]
+
+[optional footer(s)]
